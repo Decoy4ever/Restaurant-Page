@@ -22,7 +22,7 @@ class MainPg
         this.divForMain.className = "main-div"
     }
 
-    showMainPgContent()
+    showMainContent()
     {        
         // Create Header
         this.header1.textContent = "Welcome to AU Cafe Brekkie"
@@ -43,7 +43,7 @@ class MainPg
             {
                 if(btn.textContent === "Home")
                 {
-                    this.showMainPgContent()
+                    this.showMainContent()
                     this.divForMain.style.display = "block"
                     menu.divForMenu.style.display = "none"
                 }
@@ -51,7 +51,7 @@ class MainPg
                 { 
                     this.divForMain.style.display = "none"
                     menu.divForMenu.style.display = "block"
-                    menu.showMainPgContent()
+                    menu.showMenuContent()
                 }
             })
         })
@@ -62,4 +62,4 @@ class MainPg
 
 const main = new MainPg()
 main.switchTabs()
-main.showMainPgContent()
+main.showMainContent()
