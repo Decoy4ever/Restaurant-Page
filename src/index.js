@@ -1,12 +1,7 @@
 import "./styles.css"
 import { menu } from "./menu.js"
-/**
- * Main Page will have the following
- * 1. Small description of restuarnt
- * 2. Contact Hours
- * 3. Location of Address
- * 4. Load Images 
- */
+import { contacts } from "./contact.js"
+
 class MainPg
 {
     constructor()
@@ -43,15 +38,24 @@ class MainPg
             {
                 if(btn.textContent === "Home")
                 {
-                    this.showMainContent()
-                    this.divForMain.style.display = "block"
                     menu.divForMenu.style.display = "none"
+                    contacts.divForContacts.style.display = "none"
+                    this.divForMain.style.display = "block"
+                    this.showMainContent()
                 }
                 else if(btn.textContent === "Menu")
                 { 
                     this.divForMain.style.display = "none"
+                    contacts.divForContacts.style.display = "none"
                     menu.divForMenu.style.display = "block"
                     menu.showMenuContent()
+                }
+                else if(btn.textContent === "Contact Us")
+                {
+                    this.divForMain.style.display = "none"
+                    menu.divForMenu.style.display = "none"
+                    contacts.divForContacts.style.display = "block"
+                    contacts.showContactsContent()
                 }
             })
         })

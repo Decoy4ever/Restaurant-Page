@@ -2,9 +2,7 @@ class MenuPg
 {
     constructor()
     {
-        this.mainPgContent = document.querySelector(".content")
-        // this.header1 = document.createElement("h1")
-        
+        this.mainPgContent = document.querySelector(".content")        
         this.divForMenu = document.createElement("div")
         this.divForMenu.className = "menu-div"
         this.coffeeMenu = 
