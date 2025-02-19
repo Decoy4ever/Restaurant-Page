@@ -24,14 +24,16 @@ class MainPg
         this.header1.textContent = "Avo Brekkie"
         this.header1.style.fontSize = "5rem"
         this.header1.style.textShadow = "2px 2px black"
+        
+        // postion the grid
+        this.divForMain.style.gridRow = "2 / 3"
+        this.divForMain.style.gridColumn = "1 / 4"
         this.divForMain.appendChild(this.header1)
 
         // Create a Description
-        this.descriptionPara.textContent = "Here we offer classical Australian Cafe experience where you can enjoy delicious homemade roasting coffee with delicious food that will make your stomach happy"
-        this.divForMain.appendChild(this.descriptionPara)
+        // this.descriptionPara.textContent = "Here we offer classical Australian Cafe experience where you can enjoy delicious homemade roasting coffee with delicious food that will make your stomach happy"
+        // this.divForMain.appendChild(this.descriptionPara)
         this.mainPgContent.appendChild(this.divForMain)
-       
-
     }
 
     switchTabs()
@@ -44,15 +46,17 @@ class MainPg
                 {
                     menu.divForMenu.style.display = "none"
                     contacts.divForContacts.style.display = "none"
-                    this.divForMain.style.display = "block"
-                    // this.divForMain.style.gridRow = "1fr 1fr"
+                    this.divForMain.style.display = "grid"
+
+
+
                     this.showMainContent()
                 }
                 else if(btn.textContent === "Menu")
                 { 
                     this.divForMain.style.display = "none"
                     contacts.divForContacts.style.display = "none"
-                    menu.divForMenu.style.display = "block"
+                    menu.divForMenu.style.display = "grid"
                     menu.showMenuContent()
                 }
                 else if(btn.textContent === "Contact")
