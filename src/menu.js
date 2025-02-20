@@ -56,6 +56,7 @@ class MenuPg
         
         // Create the header
         headerDrinks.textContent = "Coffee Menu"
+        headerDrinks.style.textDecorationLine = "underline"
         headerDrinks.style.fontSize = "1.5rem"
 
         this.divForMenu.appendChild(headerDrinks)
@@ -68,6 +69,7 @@ class MenuPg
 
         headerFood.textContent = "Food Menu"
         headerFood.style.fontSize = "1.5rem"
+        headerFood.style.textDecorationLine = "underline"
         this.divForMenu.appendChild(headerFood)
 
         this.foodMenu.map((foodItem) => {

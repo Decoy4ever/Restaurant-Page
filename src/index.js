@@ -63,7 +63,11 @@ class MainPg
                 {
                     this.divForMain.style.display = "none"
                     menu.divForMenu.style.display = "none"
-                    contacts.divForContacts.style.display = "block"
+                    contacts.divForContacts.style.display = "grid"
+                    contacts.divForContacts.style.gridRow = " 1/5"
+                    contacts.divForContacts.style.gridColumn = "2/3"
+                    contacts.divForContacts.style.backgroundColor = "black"
+                    contacts.divForContacts.style.padding = "1rem"
                     contacts.showContactsContent()
                 }
             })

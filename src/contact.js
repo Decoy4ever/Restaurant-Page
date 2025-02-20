@@ -25,7 +25,10 @@ class Contacts
         headerOpeningHrs.textContent = "Opening hrs"
         headerLocation.textContent = "Location"
         headerContacts.textContent = "Contact"
-        
+        headerOpeningHrs.style.textDecorationLine = "underline"
+        headerContacts.style.textDecorationLine = "underline"
+        headerLocation.style.textDecorationLine = "underline"
+
         // add location info
         this.divForContacts.appendChild(headerLocation)
         const locationPara = document.createElement("p")
