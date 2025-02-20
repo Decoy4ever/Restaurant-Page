@@ -5,6 +5,7 @@ class MenuPg
         this.mainPgContent = document.querySelector(".content")        
         this.divForMenu = document.createElement("div")
         this.divForMenu.className = "menu-div"
+
         this.coffeeMenu = 
         [
             {
@@ -55,6 +56,8 @@ class MenuPg
         
         // Create the header
         headerDrinks.textContent = "Coffee Menu"
+        headerDrinks.style.fontSize = "1.5rem"
+
         this.divForMenu.appendChild(headerDrinks)
     
         this.coffeeMenu.map((coffeeItem) => {
@@ -64,6 +67,7 @@ class MenuPg
         })
 
         headerFood.textContent = "Food Menu"
+        headerFood.style.fontSize = "1.5rem"
         this.divForMenu.appendChild(headerFood)
 
         this.foodMenu.map((foodItem) => {
@@ -71,7 +75,6 @@ class MenuPg
             foodPara.textContent = `${foodItem.name} ${foodItem.price}`
             this.divForMenu.appendChild(foodPara)
         })
-
         this.mainPgContent.appendChild(this.divForMenu)
     }
 }

@@ -24,7 +24,7 @@ class Contacts
         const headerContacts = document.createElement("h1")
         headerOpeningHrs.textContent = "Opening hrs"
         headerLocation.textContent = "Location"
-        headerContacts.textContent = "Contact Us"
+        headerContacts.textContent = "Contact"
         
         // add location info
         this.divForContacts.appendChild(headerLocation)
