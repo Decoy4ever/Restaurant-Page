@@ -3,7 +3,6 @@ import { menu } from "./menu.js"
 import { contacts } from "./contact.js"
 import cafeImg from "./pics/louis-hansel-qoPAjwEiUmg-unsplash.jpg"
 
-
 class MainPg
 {
     constructor()
@@ -14,14 +13,11 @@ class MainPg
         this.buttons = document.querySelectorAll("button")
         this.divForMain = document.createElement("div")
         this.createImgDiv = document.createElement("div")
-        // this.imageBackground = document.createElement("img")
         this.divForMain.className = "main-div"
     }
 
     showMainContent()
-    {    
-        this.divForMain.textContent = ""
-        
+    {            
         // styling the main-div 
         this.divForMain.style.gridRow = " 1 / 2"
         this.divForMain.style.gridColumn = " 2 / 3"
@@ -56,16 +52,15 @@ class MainPg
             {
                 if(btn.textContent === "Home")
                 {
+                    this.showMainContent()
+                    this.divForMain.style.display = "grid"
                     menu.divForMenu.style.display = "none"
                     contacts.divForContacts.style.display = "none"
-                    this.divForMain.style.display = "grid"
-                    this.showMainContent()
                 }
                 else if(btn.textContent === "Menu")
                 { 
                     this.divForMain.style.display = "none"
                     contacts.divForContacts.style.display = "none"
-                    menu.styleMenuPg()
                     menu.showMenuContent()
                 }
                 else if(btn.textContent === "Contact")
@@ -73,10 +68,6 @@ class MainPg
                     this.divForMain.style.display = "none"
                     menu.divForMenu.style.display = "none"
                     contacts.divForContacts.style.display = "grid"
-                    contacts.divForContacts.style.gridRow = " 1/5"
-                    contacts.divForContacts.style.gridColumn = "2/3"
-                    contacts.divForContacts.style.backgroundColor = "black"
-                    contacts.divForContacts.style.padding = "1rem"
                     contacts.showContactsContent()
                 }
             })
@@ -88,3 +79,4 @@ class MainPg
 const main = new MainPg()
 main.switchTabs()
 main.showMainContent()
+

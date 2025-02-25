@@ -42,19 +42,6 @@ nav{
     grid-template-columns: 0.5fr max-content 0.5fr;
     grid-template-rows: 0.5fr 1fr 0.5fr;
 }
-/* 
-.content > * {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-} */
-/* 
-.img{
-    background: url("./pics/louis-hansel-qoPAjwEiUmg-unsplash.jpg"); 
-    background-size: 100% 100%; 
-    background-repeat: no-repeat; 
-} */
-
-
 
 nav > button{
     font-size: 0.8rem;

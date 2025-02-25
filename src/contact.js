@@ -19,6 +19,12 @@ class Contacts
     showContactsContent()
     {
         this.divForContacts.textContent = ""
+        this.divForContacts.style.gridRow = " 1/5"
+        this.divForContacts.style.gridColumn = "2/3"
+        this.divForContacts.style.backgroundColor = "black"
+        this.divForContacts.style.padding = "1rem"
+        this.divForContacts.style.border = "0.5rem solid white"
+
         const headerOpeningHrs = document.createElement("h1")
         const headerLocation = document.createElement("h1")
         const headerContacts = document.createElement("h1")

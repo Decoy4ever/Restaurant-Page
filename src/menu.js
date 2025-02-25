@@ -45,21 +45,24 @@ class MenuPg
                 price: "15"
             }
         ]
-
     }
 
     showMenuContent()
     {
         this.divForMenu.textContent = ""
-        // this.divForMenu.textContent = ""
+
+        this.divForMenu.style.display = "grid"
+        this.divForMenu.style.gridRow = " 1 / 5"
+        this.divForMenu.style.gridColumn = "2 / 3"
+        this.divForMenu.style.padding = "1rem"
+        this.divForMenu.style.backgroundColor = "black"
+        this.divForMenu.style.border = "0.5rem solid white"
+
         const headerDrinks = document.createElement("h1")
         const headerFood = document.createElement("h1")
-        
-        // Create the header
         headerDrinks.textContent = "Coffee Menu"
         headerDrinks.style.textDecorationLine = "underline"
         headerDrinks.style.fontSize = "1.5rem"
-
         this.divForMenu.appendChild(headerDrinks)
     
         this.coffeeMenu.map((coffeeItem) => {
@@ -79,16 +82,6 @@ class MenuPg
             this.divForMenu.appendChild(foodPara)
         })
         this.mainPgContent.appendChild(this.divForMenu)
-    }
-
-    styleMenuPg()
-    {
-        // modify the grid alignment of menu pg
-        this.divForMenu.style.display = "grid"
-        this.divForMenu.style.gridRow = " 1 / 5"
-        this.divForMenu.style.gridColumn = "2 / 3"
-        this.divForMenu.style.padding = "1rem"
-        this.divForMenu.style.backgroundColor = "black"
     }
 }
 
