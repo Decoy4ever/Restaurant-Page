@@ -51,6 +51,7 @@ class MenuPg
     showMenuContent()
     {
         this.divForMenu.textContent = ""
+        // this.divForMenu.textContent = ""
         const headerDrinks = document.createElement("h1")
         const headerFood = document.createElement("h1")
         
@@ -78,6 +79,16 @@ class MenuPg
             this.divForMenu.appendChild(foodPara)
         })
         this.mainPgContent.appendChild(this.divForMenu)
+    }
+
+    styleMenuPg()
+    {
+        // modify the grid alignment of menu pg
+        this.divForMenu.style.display = "grid"
+        this.divForMenu.style.gridRow = " 1 / 5"
+        this.divForMenu.style.gridColumn = "2 / 3"
+        this.divForMenu.style.padding = "1rem"
+        this.divForMenu.style.backgroundColor = "black"
     }
 }
 
