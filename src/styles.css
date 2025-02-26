@@ -16,34 +16,39 @@ html, body{
 
 body{
     display: grid;
-    grid-template-rows: min-content 1fr;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: repeat(12,1fr);
+    grid-template-columns: repeat(12, 1fr);
 }
 
 /* Styling the navigation bar */
 header{
-    grid-column: 1 / 4;
+    grid-column: 1 / 13;
     grid-row: 1 / 2;
+    background-color: black;
+    padding: 1rem;
 }
 
 nav{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 1rem;
-    background-color: black;
+    flex: 1;
 }
 
 /* Styling the body */
 .content{
-    grid-column: 1 / 4;
-    grid-row: 2 / 3;
+    /* padding: 1rem; */
+    grid-column: 1 / 13;
+    grid-row: 2 / 13;
     background-color: #4ade80;
     display: grid;
-    grid-template-columns: 0.5fr max-content 0.5fr;
-    grid-template-rows: 0.5fr 1fr 0.5fr;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
 }
 
 nav > button{
+    padding: 0.2rem;
     font-size: 0.8rem;
     border: none;
     background-color: black;
