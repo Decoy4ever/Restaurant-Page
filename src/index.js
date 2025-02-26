@@ -24,7 +24,7 @@ class MainPg
         
         // creating and style the Header
         this.header1.textContent = "Odin Brekkie"
-        this.header1.style.fontSize = "4rem"
+        this.header1.style.fontSize = "3rem"
         this.header1.style.gridColumn = " 2 / 3"
         this.header1.style.gridRow = "1 / 2"
         this.header1.style.textAlign = "center"
@@ -36,6 +36,7 @@ class MainPg
         this.createImgDiv.className = "img"
         this.createImgDiv.style.backgroundImage = `url(${cafeImg})`
         this.createImgDiv.style.backgroundSize = "100% 100%"
+        this.createImgDiv.style.padding = "1rem"
         this.createImgDiv.style.backgroundRepeat = "no-repeat"
         this.createImgDiv.style.gridColumn = "2/3"
         this.createImgDiv.style.gridRow = "2/3"

@@ -43,8 +43,10 @@ nav{
     grid-row: 2 / 13;
     background-color: #4ade80;
     display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: minmax(20%,1fr) 4fr minmax(20%,1fr);
+    grid-template-rows: minmax(20%,1fr) 4fr minmax(20%,1fr);
+    justify-content: center;
+    align-content: center;
 }
 
 nav > button{
@@ -57,6 +59,7 @@ nav > button{
 }
 
 .content > h1 {
+    padding: 1rem;
     font-size: 2rem;
 }
 
