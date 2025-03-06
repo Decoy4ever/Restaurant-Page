@@ -12,8 +12,8 @@ class MainPg
         this.descriptionPara = document.createElement("p")
         this.buttons = document.querySelectorAll("button")
         this.divForMain = document.createElement("div")
-        this.createImgDiv = document.createElement("div")
         this.divForMain.className = "main-div"
+        this.createCafeImg = document.createElement("img")
     }
 
     showMainContent()
@@ -24,24 +24,24 @@ class MainPg
         
         // creating and style the Header
         this.header1.textContent = "Odin Brekkie"
-        this.header1.style.fontSize = "3rem"
-        this.header1.style.gridColumn = " 2 / 3"
+        this.header1.style.fontSize = "12rem"
+        this.header1.style.gridColumn = " 2 / 6"
         this.header1.style.gridRow = "1 / 2"
         this.header1.style.textAlign = "center"
+        this.header1.style.zIndex = 1
         this.header1.style.textShadow = "0.5rem 0.5rem 1rem black"
         this.header1.style.color = "white"
         this.mainPgContent.appendChild(this.header1)
 
         // create and style img
-        this.createImgDiv.className = "img"
-        this.createImgDiv.style.backgroundImage = `url(${cafeImg})`
-        this.createImgDiv.style.backgroundSize = "100% 100%"
-        this.createImgDiv.style.padding = "1rem"
-        this.createImgDiv.style.backgroundRepeat = "no-repeat"
-        this.createImgDiv.style.gridColumn = "2/3"
-        this.createImgDiv.style.gridRow = "2/3"
-        
-        this.mainPgContent.appendChild(this.createImgDiv)
+        this.createCafeImg.style.gridRow = "1/7"
+        this.createCafeImg.style.gridColumn = "1/7"
+        this.createCafeImg.style.width = "100%"
+        this.createCafeImg.style.height = "100%"
+        this.createCafeImg.classList.add("cafeImg")
+        this.createCafeImg.src = cafeImg
+
+        this.mainPgContent.appendChild(this.createCafeImg)
         this.mainPgContent.appendChild(this.divForMain)
     }
 

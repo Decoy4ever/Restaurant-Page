@@ -43,8 +43,8 @@ nav{
     grid-row: 2 / 13;
     background-color: #4ade80;
     display: grid;
-    grid-template-columns: minmax(20%,1fr) 4fr minmax(20%,1fr);
-    grid-template-rows: minmax(20%,1fr) 4fr minmax(20%,1fr);
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(6,1fr);
     justify-content: center;
     align-content: center;
 }
@@ -55,7 +55,7 @@ nav > button{
     border: none;
     background-color: black;
     border-radius: 0.1rem;
-    
+    font-size: 2rem;
 }
 
 .content > h1 {
