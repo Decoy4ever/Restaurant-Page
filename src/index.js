@@ -17,10 +17,10 @@ class MainPg
     }
 
     showMainContent()
-    {            
+    {   
         // styling the main-div 
-        this.divForMain.style.gridRow = " 1 / 2"
-        this.divForMain.style.gridColumn = " 2 / 3"
+        this.divForMain.style.gridRow = " 1 / 7"
+        this.divForMain.style.gridColumn = " 1 / 7"
         
         // creating and style the Header
         this.header1.textContent = "Odin Brekkie"
@@ -31,7 +31,7 @@ class MainPg
         this.header1.style.zIndex = 1
         this.header1.style.textShadow = "0.5rem 0.5rem 1rem black"
         this.header1.style.color = "white"
-        this.mainPgContent.appendChild(this.header1)
+        this.divForMain.appendChild(this.header1)
 
         // create and style img
         this.createCafeImg.style.gridRow = "1/7"
@@ -53,15 +53,16 @@ class MainPg
             {
                 if(btn.textContent === "Home")
                 {
-                    this.showMainContent()
-                    this.divForMain.style.display = "grid"
                     menu.divForMenu.style.display = "none"
                     contacts.divForContacts.style.display = "none"
+                    this.divForMain.style.display = "grid"
+                    this.showMainContent()
                 }
                 else if(btn.textContent === "Menu")
                 { 
                     this.divForMain.style.display = "none"
                     contacts.divForContacts.style.display = "none"
+                    // menu.divForMenu.style.display = "grid"
                     menu.showMenuContent()
                 }
                 else if(btn.textContent === "Contact")
